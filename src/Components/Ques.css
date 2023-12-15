@@ -1,0 +1,114 @@
+.ques-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ques {
+  border-radius: 20px;
+  padding: 20px;
+  background-color: rgb(164, 249, 153);
+  height: fit-content;
+  width: 600px;
+  text-align: center;
+}
+
+#ques-h1 {
+  background-color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 45px;
+}
+
+.ques-form {
+  font-size: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#ques-text {
+  text-align: center;
+  border: none;
+  height: 50px;
+  font-size: 100%;
+  width: 98%;
+  border-radius: 5px;
+  outline: none;
+}
+
+#ques-submit,
+#next {
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  height: 50px;
+  width: 100%;
+  font-size: 25px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+#ques-submit:hover,
+#next:hover {
+  background-color: rgb(40, 40, 40);
+}
+
+#option {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2px;
+}
+
+.options {
+  color: white;
+  font-size: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 285px;
+  height: 200px;
+}
+
+#option-1,
+#option-2,
+#option-3,
+#option-4 {
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#option-1:focus,
+#option-2:focus,
+#option-3:focus,
+#option-4:focus {
+  background-color: rgb(203, 60, 60);
+}
+
+#option-1 {
+  background-color: red;
+}
+
+#option-2 {
+  background-color: rgb(243, 73, 26);
+}
+
+#option-3 {
+  background-color: green;
+}
+
+#option-4 {
+  background-color: blue;
+}
+
+.btns {
+  gap: 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
