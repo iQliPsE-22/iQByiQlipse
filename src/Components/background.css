@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .background-container {
   height: min-content;
   width: 100%;
@@ -56,3 +57,63 @@
    display: none;
   }
 }
+=======
+.background-container {
+  height: min-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#background {
+  letter-spacing: 2px;
+  position: absolute;
+  bottom: -70px;
+  font-size: 20rem;
+  background-image: url("../Assets/history.jpg");
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: fantasy;
+  box-shadow: 10px 100px 20px var(--secondary-color);
+  animation: slideshow infinite ease;
+  animation-duration: 100s;
+  z-index: -100px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+@keyframes slideshow {
+  0%,
+  100% {
+    background-image: url("../Assets/sports.jpg");
+  }
+  16.67% {
+    background-image: url("../Assets/space.jpg");
+  }
+  33.33% {
+    background-image: url("../Assets/history.jpg");
+  }
+  50% {
+    background-image: url("../Assets/reasoning.jpg");
+  }
+  66.67% {
+    background-image: url("../Assets/politics.webp");
+  }
+  83.33% {
+    background-image: url("../Assets/tech.jpg");
+  }
+}
+@media screen and (max-width: 920px) {
+  .background-container {
+    display: none;
+  }
+  #background {
+   display: none;
+  }
+}
+>>>>>>> fd8079f5db48911cf9ce54c2b787b85b19833b2e
