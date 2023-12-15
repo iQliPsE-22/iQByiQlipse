@@ -1,0 +1,12 @@
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    color: rgb(151, 37, 37);
+    z-index: 1;
+    position: absolute;
+  }
+  

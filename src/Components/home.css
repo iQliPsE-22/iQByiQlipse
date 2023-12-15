@@ -1,0 +1,15 @@
+.nav {
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media screen and (max-width: 920px) {
+  .nav {
+    height: 100%;
+    width: fit-content;
+    flex-direction: column;
+    background-color: rgb(255, 241, 241, 0.4);
+    z-index: 1;
+  }
+}
