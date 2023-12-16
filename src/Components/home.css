@@ -4,12 +4,13 @@
   justify-content: center;
   align-items: flex-start;
 }
+
 @media screen and (max-width: 920px) {
   .nav {
-    height: 100%;
-    width: fit-content;
+    height: auto;
     flex-direction: column;
-    background-color: rgb(255, 241, 241, 0.4);
+    align-items: center;
+    justify-content: center;
     z-index: 1;
   }
 }

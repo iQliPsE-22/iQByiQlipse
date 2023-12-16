@@ -1,24 +1,31 @@
 .card {
-  height:60%;
+  height: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.2s;
-  margin: 5px;
+  margin: 20px;
   color: rgb(238, 177, 64);
   z-index: 1;
-  margin: 20px;
   background-color: white;
-  padding:0 8px 0 8px;
+  padding: 0 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
 }
-.card:hover{
-  background-color:#ff0099;
-  color:white
+
+.card:hover {
+  background-color: #ff0099;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a stronger box shadow on hover */
 }
+
 @media screen and (max-width: 920px) {
   .card {
-    
+    height: 40%; /* Adjust the height for smaller screens */
+    width:60%;
+    min-width: fit-content;
+    margin: 10px; /* Adjust the margin for smaller screens */
+    padding: 0 4px 0 4px; /* Adjust the padding for smaller screens */
   }
 }

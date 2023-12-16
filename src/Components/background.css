@@ -8,9 +8,10 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
 #background {
   letter-spacing: 2px;
-  position: absolute;
+  position: fixed;
   bottom: -70px;
   font-size: 20rem;
   background-image: url("../Assets/history.jpg");
@@ -23,10 +24,11 @@
   box-shadow: 10px 100px 20px var(--secondary-color);
   animation: slideshow infinite ease;
   animation-duration: 100s;
-  z-index: -100px;
+  z-index: -1;
   transition: 0.5s;
   overflow: hidden;
 }
+
 @keyframes slideshow {
   0%,
   100% {
@@ -48,11 +50,15 @@
     background-image: url("../Assets/tech.jpg");
   }
 }
-@media screen and (max-width: 920px) {
-  .background-container {
-    display: none;
-  }
+/* Responsive Styles */
+@media (max-width: 768px) {
   #background {
-   display: none;
+    font-size: 10rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #background {
+    font-size: 5rem;
   }
 }
