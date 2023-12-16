@@ -58,7 +58,6 @@ const App = () => {
 
   return (
     <div className="Parent">
-      <h1>HEllo</h1>
       <Background background={background} />
       <BrowserRouter>
         <Routes>

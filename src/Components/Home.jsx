@@ -6,7 +6,6 @@ const Home = ({ handleBackground, handleSelectedCard }) => {
   const handleCardSelection = (value) => {
     handleSelectedCard(value);
   };
-  handleBackground("Quiz");
   return (
     <div>
       <div className="nav">
