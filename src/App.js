@@ -62,7 +62,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/iQByiQlipse"
+            path="/"
             element={
               <Home
                 handleSelectedCard={handleSelectedCard}
@@ -86,6 +86,7 @@ const App = () => {
           />
         </Routes>
       </BrowserRouter>
+      <h1>Hello</h1>
     </div>
   );
 };
