@@ -86,7 +86,6 @@ const App = () => {
           />
         </Routes>
       </BrowserRouter>
-      <h1>Hello</h1>
     </div>
   );
 };
