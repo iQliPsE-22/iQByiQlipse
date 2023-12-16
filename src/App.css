@@ -1,6 +1,6 @@
 :root {
   --primary-color: #3023ae;
-  --secondary-color: #ff0099;
+  --secondary-color: #ff0f9f;
 }
 
 body {
@@ -166,7 +166,7 @@ li {
   .question-container {
     padding: 20px;
     color: aliceblue;
-    min-height: 100vh;
+    max-height: 100vh;
     height: fit-content;
     width: fit-content;
     transition: 0.5s;
