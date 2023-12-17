@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Itim&family=Julius+Sans+One&display=swap");
+
 .header {
   display: flex;
   align-items: center;
@@ -10,8 +11,9 @@
   max-height: fit-content;
   height: 70px;
 }
+
 @media screen and (max-width:920px) {
-  .header{
-    height:55px;
+  .header {
+    height: 55px;
   }
 }
