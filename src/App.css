@@ -1,6 +1,6 @@
 :root {
   --primary-color: #3023ae;
-  --secondary-color: #ff0f9f;
+  --secondary-color: #ff0099;
 }
 
 body {
@@ -159,6 +159,7 @@ li {
     width: 100%;
   }
   .back-container {
+    height: 90%;
     max-height: 100%;
     max-width: fit-content;
     height: fit-content;
@@ -167,6 +168,7 @@ li {
     padding: 20px;
     color: aliceblue;
     max-height: 100vh;
+    max-width:100%;
     height: fit-content;
     width: fit-content;
     transition: 0.5s;

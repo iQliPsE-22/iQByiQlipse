@@ -14,6 +14,7 @@ import {
 } from "./Components/QuesSet.jsx";
 import Home from "./Components/Home.jsx";
 import Background from "./Components/Background";
+import Header from "./Components/Header";
 
 const App = () => {
   const [score, setScore] = useState(0);
@@ -58,6 +59,7 @@ const App = () => {
 
   return (
     <div className="Parent">
+      <Header />
       <Background background={background} />
       <BrowserRouter>
         <Routes>

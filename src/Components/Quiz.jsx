@@ -22,7 +22,7 @@ const Quiz = ({ updateScore, questions }) => {
     setSelectedOption(optionIndex);
     setCurrentOption(e.target.textContent);
   }
-  function handleNext(e, optionIndex) {
+  function handleNext() {
     currentQues < questions.length - 1 &&
       setCurrentQues((prevQues) => prevQues + 1);
     setSelectedOption(null);
@@ -31,7 +31,9 @@ const Quiz = ({ updateScore, questions }) => {
       setScore((prevScore) => prevScore + 1);
   }
   function handleResult() {
-    updateScore(score);
+    let x = 0;
+    if (currOption === questions[currentQues].correct) x = x + 1;
+    updateScore(score + x);
     navigate("/Result");
   }
   return (

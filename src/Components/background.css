@@ -20,7 +20,11 @@
   -webkit-background-clip: text;
   color: transparent;
   font-family: fantasy;
-  box-shadow: 10px 100px 20px var(--secondary-color);
+  /* box-shadow: 10px 100px 20px var(--secondary-color); */
+  filter: drop-shadow(
+    4px 4px 8px rgba(255, 255, 255,100)
+  ); /* Adjust the values based on your preference */
+
   animation: slideshow infinite ease;
   animation-duration: 100s;
   z-index: -100px;
@@ -53,7 +57,7 @@
     display: none;
   }
   #background {
-   display: none;
+    display: none;
   }
 }
 

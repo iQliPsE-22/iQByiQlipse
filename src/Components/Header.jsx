@@ -1,13 +1,10 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
+import "./header.css";
 const Header = () => {
   return (
-    <div>
-      <ul id="header">
-        <li>Contact Us</li>
-        <li>Make-a-Quiz</li>
-        <li>Home</li>
-      </ul>
+    <div className="header">
+      <h2>RizzQuiz</h2>
     </div>
   );
 };
