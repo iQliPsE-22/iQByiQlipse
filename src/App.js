@@ -15,6 +15,7 @@ import {
 import Home from "./Components/Home.jsx";
 import Background from "./Components/Background";
 import Header from "./Components/Header";
+import Ques from "./Components/Ques";
 
 const App = () => {
   const [score, setScore] = useState(0);
@@ -86,6 +87,7 @@ const App = () => {
               />
             }
           />
+          <Route path="/custom-ques" element={<Ques />} />
         </Routes>
       </BrowserRouter>
     </div>

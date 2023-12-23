@@ -4,7 +4,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -24,7 +23,6 @@
   filter: drop-shadow(
     4px 4px 8px rgba(255, 255, 255,100)
   ); /* Adjust the values based on your preference */
-
   animation: slideshow infinite ease;
   animation-duration: 100s;
   z-index: -100px;

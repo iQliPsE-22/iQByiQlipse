@@ -5,10 +5,11 @@
 
 body {
   user-select: none;
-  background-color: black;
+  background-color: rgb(189, 185, 185);
   font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Geneva,
     Verdana, sans-serif;
   overflow-x: hidden;
+  
 }
 
 li {
@@ -140,6 +141,7 @@ li {
   border-radius: 10px;
   cursor: pointer;
   border: none;
+  margin: 10px;
 }
 
 #res-btn:hover {

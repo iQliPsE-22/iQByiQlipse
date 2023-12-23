@@ -1,0 +1,88 @@
+.user-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-login form {
+    background-color: transparent;
+    outline: none;
+}
+
+.user-form h1 {
+    text-align: center;
+}
+
+.user-form {
+    opacity: 0.9;
+    transition: 0.5s;
+    height: fit-content;
+    width:24%;
+}
+
+form.h1 {
+    text-align: center;
+}
+
+.user-form {
+  background-color: rgba(239, 255, 252, 0.9); /* Use rgba for transparent background with opacity */
+  padding: 40px;
+  border-radius: 25px;
+  backdrop-filter: blur(10px); /* Apply a blur effect to create a glass-like appearance */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+}
+
+label {
+    display: block;
+    font-weight: light;
+    margin-bottom: 5px;
+}
+
+.user-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    margin-top: 50px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button.user-switch {
+    height: 50px;
+    color: antiquewhite;
+    background-color: rgb(28, 31, 30);
+    border-radius: 20px;
+    border: none;
+    width: 150px;
+    font-size: 15px;
+    cursor: pointer;
+    position: absolute;
+    right: 50px;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 920px) {
+
+    .user-form {
+        height: max-content;
+        max-height: 90%;
+        width: 70%;
+        position: absolute;
+        top: 100px;
+        z-index: 1;
+        left: 10px;
+        overflow: hidden;
+    }
+}
+
