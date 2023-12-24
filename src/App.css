@@ -9,8 +9,8 @@ body {
   font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Geneva,
     Verdana, sans-serif;
   overflow-x: hidden;
-  
 }
+
 
 li {
   list-style-type: none;
@@ -21,13 +21,14 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(176, 173, 173);
   overflow: hidden;
+  
 }
 
 .back-container {
   padding: 10px;
-  background: rgba(255, 0, 153, 0.829); /* Use rgba for transparency */
+  background-color: rgba(255, 255, 255, 0.361);
   color: aliceblue;
   min-height: 500px;
   min-width: fit-content;
@@ -36,35 +37,43 @@ li {
   display: flex;
   align-items: center;
   justify-content: baseline;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.8); /* Box shadow for glass effect */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.8);
+  backdrop-filter: blur(5px); /* Apply a blur effect to create a glass-like appearance */
   animation: curtain 100s linear;
   z-index: 1;
   border-radius: 20px;
 }
 
 @keyframes curtain {
+
   0%,
   100% {
     border-radius: 0% 100% 0% 100% / 100% 0% 100% 0%;
   }
+
   10%,
   90% {
     border-radius: 0% 100% 20% 80% / 100% 0% 100% 0%;
   }
+
   20%,
   80% {
     border-radius: 0% 100% 42% 58% / 100% 0% 100% 0%;
   }
+
   30%,
   70% {
     border-radius: 0% 100% 62% 38% / 100% 0% 100% 0%;
   }
+
   40% {
     border-radius: 0% 100% 76% 24% / 100% 0% 100% 0%;
   }
+
   50% {
     border-radius: 0% 100% 100% 0% / 100% 0% 100% 0%;
   }
+
   60% {
     border-radius: 0% 100% 81% 19% / 100% 0% 100% 0%;
   }
@@ -72,7 +81,7 @@ li {
 
 .question-container {
   padding: 20px;
-  background-color: rgba(77, 77, 77, 0.361);
+  background: rgba(120, 152, 207, 0.575); 
   color: aliceblue;
   min-height: 600px;
   height: fit-content;
@@ -160,12 +169,14 @@ li {
     height: 100%;
     width: 100%;
   }
+
   .back-container {
     height: 90%;
     max-height: 100%;
     max-width: fit-content;
     height: fit-content;
   }
+
   .question-container {
     padding: 20px;
     color: aliceblue;
@@ -174,7 +185,9 @@ li {
     height: fit-content;
     width: fit-content;
     transition: 0.5s;
+    /* backdrop-filter: blur(10px); */
   }
+
   .options {
     width: min-content;
     height: min-content;
@@ -184,10 +197,12 @@ li {
     margin-left: auto;
     margin-right: auto;
   }
+
   .option {
     height: 50px;
     width: 150px;
   }
+
   #res-btn {
     margin-top: 20px;
     background-color: var(--secondary-color);
@@ -198,20 +213,25 @@ li {
 @media screen and (max-width: 550px) {
   .back-container {
     max-width: 100%;
-    background: rgba(255, 0, 153, 0.5); /* Use rgba for transparency */
     max-height: 100vh;
-    backdrop-filter: blur(10px); /* Add backdrop-filter for the glass effect */
+    backdrop-filter: blur(10px);
+    /* Add backdrop-filter for the glass effect */
   }
+
   .question-container {
     max-width: 100%;
     max-height: 100vh;
-    backdrop-filter: blur(10px); /* Add backdrop-filter for the glass effect */
+    backdrop-filter: blur(10px);
+    /* Add backdrop-filter for the glass effect */
+    background: rgba(75, 75, 75, 0.295); 
 
   }
+
   .options {
     grid-template-columns: auto auto;
     gap: 20px;
   }
+
   .option {
     width: 150px;
   }

@@ -1,31 +1,31 @@
 import React, { useState } from "react";
 import "../App.css";
 import "./Ques.css";
-function Ques() {
-  const [num, setNum] = useState(1);
-  const [ques, setQues] = useState("");
-  const [newQues, setNewQues] = useState([]);
-  const [options, setOptions] = useState(["", "", "", ""]);
+// import { useNavigate } from "react-router-dom";
+
+function Ques({ handleSetQuestionsList }) {
+  const [questionNumber, setQuestionNumber] = useState(1);
+  const [questionText, setQuestionText] = useState("");
+  const [optionsList, setOptionsList] = useState(["", "", "", ""]);
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(ques);
-    console.log(options);
+    const newQuestion = { question: questionText, options: [...optionsList] };
+    handleSetQuestionsList(newQuestion);
   }
 
   function handleOptionChange(index, value) {
-    const newOptions = [...options];
+    const newOptions = [...optionsList];
     newOptions[index] = value;
-    setOptions(newOptions);
+    setOptionsList(newOptions);
   }
 
   function handleNext() {
-    const newQuestion = { question: ques, options: [...options] };
-    setNewQues([...newQues, newQuestion]);
-    console.log("Last newQues and Options:", newQues);
-    setQues("");
-    setOptions(["", "", "", ""]);
-    setNum((preNum) => preNum + 1);
+    const newQuestion = { question: questionText, options: [...optionsList] };
+    handleSetQuestionsList(newQuestion);
+    setQuestionText("");
+    setOptionsList(["", "", "", ""]);
+    setQuestionNumber((prevQuestionNumber) => prevQuestionNumber + 1);
   }
 
   return (
@@ -33,14 +33,14 @@ function Ques() {
       <div className="back-container">
         <div className="question-container">
           <div id="num-circle">
-            <h1 id="num">{num}</h1>
+            <h1 id="num">{questionNumber}</h1>
           </div>
           <form className="ques-form" onSubmit={handleSubmit}>
             <input
               id="ques-text"
-              value={ques}
+              value={questionText}
               type="text"
-              onChange={(e) => setQues(e.target.value)}
+              onChange={(e) => setQuestionText(e.target.value)}
             />
             <br />
             <div className="options">
@@ -49,7 +49,7 @@ function Ques() {
                 type="text"
                 placeholder="Option 1"
                 id="option-1"
-                value={options[0]}
+                value={optionsList[0]}
                 onChange={(e) => handleOptionChange(0, e.target.value)}
               />
 
@@ -58,7 +58,7 @@ function Ques() {
                 type="text"
                 placeholder="Option 2"
                 id="option-2"
-                value={options[1]}
+                value={optionsList[1]}
                 onChange={(e) => handleOptionChange(1, e.target.value)}
               />
 
@@ -67,7 +67,7 @@ function Ques() {
                 type="text"
                 placeholder="Option 3"
                 id="option-3"
-                value={options[2]}
+                value={optionsList[2]}
                 onChange={(e) => handleOptionChange(2, e.target.value)}
               />
 
@@ -76,20 +76,20 @@ function Ques() {
                 type="text"
                 placeholder="Option 4"
                 id="option-4"
-                value={options[3]}
+                value={optionsList[3]}
                 onChange={(e) => handleOptionChange(3, e.target.value)}
               />
             </div>
             <div className="res">
+              <button id="res-btn" onClick={handleNext}>
+                Next
+              </button>
               <input
                 id="res-btn"
                 type="submit"
                 value="Save"
                 onClick={handleSubmit}
               />
-              <button id="res-btn" onClick={handleNext}>
-                Next
-              </button>
             </div>
           </form>
         </div>

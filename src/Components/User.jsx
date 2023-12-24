@@ -8,11 +8,6 @@ const User = () => {
     email: "",
     phone: "",
   });
-
-  const handleClick = () => {
-    setClicked(true);
-  };
-
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
@@ -33,6 +28,7 @@ const User = () => {
         email: "",
         phone: "",
       });
+      setClicked(true);
     } catch (error) {
       console.error("Error submitting form data:", error);
     }
@@ -42,10 +38,7 @@ const User = () => {
     <div>
       {!clicked && (
         <div className="user-login">
-          <form
-            className="user-form"
-            onSubmit={(handleFormSubmit, handleClick)}
-          >
+          <form className="user-form" onSubmit={handleFormSubmit}>
             <h1>Signup</h1>
             <label htmlFor="name">Name</label>
             <input

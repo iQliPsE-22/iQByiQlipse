@@ -3,12 +3,17 @@ import React from "react";
 import Card from "./Card";
 import "./home.css";
 import User from "./User";
-// import User from './User';
+import { useNavigate } from "react-router-dom";
+
 const Home = ({ handleBackground, handleSelectedCard }) => {
+  const navigate = useNavigate();
   const handleCardSelection = (value) => {
     handleSelectedCard(value);
   };
   handleBackground("RizzQuiz");
+  function handleClick() {
+    navigate("/custom-ques");
+  }
   return (
     <>
       <div>
@@ -22,9 +27,13 @@ const Home = ({ handleBackground, handleSelectedCard }) => {
             handleSelectedCard={handleCardSelection}
           />
           <Card value="Technology" handleSelectedCard={handleCardSelection} />
+          <Card
+            value="Custom"
+            handleSelectedCard={handleCardSelection}
+            onClick={handleClick}
+          />
         </div>
-        <User/>
-
+        <User />
       </div>
     </>
   );

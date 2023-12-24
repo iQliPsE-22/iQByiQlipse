@@ -1,6 +1,7 @@
 import React from "react";
-import "./result.css"
-const Result = ({ score, questions,handleBackground}) => {
+import "./result.css";
+
+const Result = ({ score, questions, handleBackground }) => {
   return (
     <div className="result">
       <h1>
