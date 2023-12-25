@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../App.css";
 
 const Quiz = ({ updateScore, questions }) => {
   const navigate = useNavigate();
@@ -10,43 +10,34 @@ const Quiz = ({ updateScore, questions }) => {
   const [timeRemaining, setTimeRemaining] = useState(100);
   const [currOption, setCurrentOption] = useState("");
 
-  // for timer
+  //for timer
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeRemaining((prevTime) => prevTime - 1);
+      if (timeRemaining > 0) setTimeRemaining((prevTime) => prevTime - 1);
+      else navigate("/Result");
     }, 1000);
-
-    if (timeRemaining === 0) {
-      clearInterval(timer);
-      navigate("/Result");
-    }
-
     return () => clearInterval(timer);
-  }, [timeRemaining, navigate]);
+  }, [timeRemaining, currentQues]);
 
   function handleOption(e, optionIndex) {
     setSelectedOption(optionIndex);
     setCurrentOption(e.target.textContent);
   }
-
   function handleNext() {
-    setCurrentQues((prevQues) => prevQues + 1);
+    currentQues < questions.length - 1 &&
+      setCurrentQues((prevQues) => prevQues + 1);
     setSelectedOption(null);
-
+    console.log(currOption);
     if (currOption === questions[currentQues].correct) {
       setScore((prevScore) => prevScore + 1);
     }
   }
-
   function handleResult() {
     let x = 0;
-    if (currOption === questions[currentQues].correct) {
-      x = 1;
-    }
+    if (currOption === questions[currentQues].correct) x = x + 1;
     updateScore(score + x);
     navigate("/Result");
   }
-
   return (
     <div className="container">
       <div className="back-container">
@@ -57,23 +48,42 @@ const Quiz = ({ updateScore, questions }) => {
           </div>
           <h1 id="ques-h1">{questions[currentQues].ques}</h1>
           <ul className="options">
-            {questions[currentQues].options.map((option, index) => (
-              <li
-                key={index}
-                id={`option-${index + 1}`}
-                className={`option ${selectedOption === index ? "clicked" : ""}`}
-                onClick={(e) => handleOption(e, index)}
-              >
-                {option}
-              </li>
-            ))}
+            <li
+              id="option-1"
+              className={`option ${selectedOption === 0 ? "clicked" : ""}`}
+              onClick={(e) => handleOption(e, 0)}
+            >
+              {questions[currentQues].options[0]}
+            </li>
+            <li
+              id="option-2"
+              className={`option ${selectedOption === 1 ? "clicked" : ""}`}
+              onClick={(e) => handleOption(e, 1)}
+            >
+              {questions[currentQues].options[1]}
+            </li>
+            <li
+              id="option-3"
+              className={`option ${selectedOption === 2 ? "clicked" : ""}`}
+              onClick={(e) => handleOption(e, 2)}
+            >
+              {questions[currentQues].options[2]}
+            </li>
+            <li
+              id="option-4"
+              className={`option ${selectedOption === 3 ? "clicked" : ""}`}
+              onClick={(e) => handleOption(e, 3)}
+            >
+              {questions[currentQues].options[3]}
+            </li>
           </ul>
           <div className="res">
-            {currentQues < questions.length - 1 ? (
+            {currentQues < questions.length - 1 && (
               <button onClick={handleNext} id="res-btn">
                 Next
               </button>
-            ) : (
+            )}
+            {currentQues === questions.length - 1 && (
               <button onClick={handleResult} id="res-btn">
                 Results
               </button>

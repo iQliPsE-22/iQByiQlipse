@@ -36,12 +36,13 @@ const App = () => {
 
   function updateScore(newScore) {
     setScore(newScore);
+    console.log(score);
   }
 
   function handleBackground() {
     setBackground("RizzQuiz");
   }
-  
+
   function handleSelectedCard(cardValue) {
     setBackground(cardValue);
     switch (cardValue) {
@@ -64,7 +65,7 @@ const App = () => {
         setQuestions(technology);
         break;
       default:
-        setQuestions(questionsList);
+        setQuestions("");
     }
   }
   return (
@@ -87,7 +88,7 @@ const App = () => {
             element={<Quiz questions={questions} updateScore={updateScore} />}
           />
           <Route
-            path="/eesult"
+            path="/result"
             element={
               <Result
                 score={score}
@@ -99,6 +100,12 @@ const App = () => {
           <Route
             path="/custom-ques"
             element={<Ques handleSetQuestionsList={handleSetQuestionsList} />}
+          />
+          <Route
+            path="/custom-quiz"
+            element={
+              <Quiz questions={questionsList} updateScore={updateScore} />
+            }
           />
         </Routes>
       </BrowserRouter>

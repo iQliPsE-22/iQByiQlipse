@@ -27,11 +27,9 @@ const Home = ({ handleBackground, handleSelectedCard }) => {
             handleSelectedCard={handleCardSelection}
           />
           <Card value="Technology" handleSelectedCard={handleCardSelection} />
-          <Card
-            value="Custom"
-            handleSelectedCard={handleCardSelection}
-            onClick={handleClick}
-          />
+          <div className="card" onClick={handleClick}>
+            <h2>Custom</h2>
+          </div>
         </div>
         <User />
       </div>

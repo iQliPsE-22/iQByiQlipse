@@ -49,6 +49,16 @@ const sports = [
     options: ["India", "Australia", "England", "New Zealand"],
     correct: "England",
   },
+  {
+    ques: "Which country has won the most FIFA World Cup titles?",
+    options: ["Brazil", "Germany", "Italy", "Argentina"],
+    correct: "Brazil",
+  },
+  {
+    ques: "Who is the most decorated Olympian of all time?",
+    options: ["Michael Phelps", "Usain Bolt", "Simone Biles", "Serena Williams"],
+    correct: "Michael Phelps",
+  }
 ];
 
 const space = [
