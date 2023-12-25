@@ -21,7 +21,7 @@
   font-family: fantasy;
   /* box-shadow: 10px 100px 20px var(--secondary-color); */
   filter: drop-shadow(
-    4px 4px 8px rgba(255, 255, 255,100)
+    4px 4px 8px rgba(25, 255, 255,100)
   ); /* Adjust the values based on your preference */
   animation: slideshow infinite ease;
   animation-duration: 100s;

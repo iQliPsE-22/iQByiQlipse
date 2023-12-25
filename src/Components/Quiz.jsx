@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
 const Quiz = ({ updateScore, questions }) => {
   const navigate = useNavigate();
   const [currentQues, setCurrentQues] = useState(0);
@@ -16,7 +17,7 @@ const Quiz = ({ updateScore, questions }) => {
       else navigate("/Result");
     }, 1000);
     return () => clearInterval(timer);
-  }, [timeRemaining, currentQues]);
+  }, [timeRemaining, currentQues, navigate]);
 
   function handleOption(e, optionIndex) {
     setSelectedOption(optionIndex);
@@ -27,8 +28,9 @@ const Quiz = ({ updateScore, questions }) => {
       setCurrentQues((prevQues) => prevQues + 1);
     setSelectedOption(null);
     console.log(currOption);
-    if (currOption === questions[currentQues].correct)
+    if (currOption === questions[currentQues].correct) {
       setScore((prevScore) => prevScore + 1);
+    }
   }
   function handleResult() {
     let x = 0;
@@ -51,28 +53,28 @@ const Quiz = ({ updateScore, questions }) => {
               className={`option ${selectedOption === 0 ? "clicked" : ""}`}
               onClick={(e) => handleOption(e, 0)}
             >
-              {questions[currentQues].option1}
+              {questions[currentQues].options[0]}
             </li>
             <li
               id="option-2"
               className={`option ${selectedOption === 1 ? "clicked" : ""}`}
               onClick={(e) => handleOption(e, 1)}
             >
-              {questions[currentQues].option2}
+              {questions[currentQues].options[1]}
             </li>
             <li
               id="option-3"
               className={`option ${selectedOption === 2 ? "clicked" : ""}`}
               onClick={(e) => handleOption(e, 2)}
             >
-              {questions[currentQues].option3}
+              {questions[currentQues].options[2]}
             </li>
             <li
               id="option-4"
               className={`option ${selectedOption === 3 ? "clicked" : ""}`}
               onClick={(e) => handleOption(e, 3)}
             >
-              {questions[currentQues].option4}
+              {questions[currentQues].options[3]}
             </li>
           </ul>
           <div className="res">

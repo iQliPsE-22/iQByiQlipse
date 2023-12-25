@@ -1,5 +1,5 @@
 // App.jsx
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Quiz from "./Components/Quiz";
@@ -16,22 +16,37 @@ import Home from "./Components/Home.jsx";
 import Background from "./Components/Background";
 import Header from "./Components/Header";
 import Ques from "./Components/Ques";
-
 const App = () => {
   const [score, setScore] = useState(0);
   const [questions, setQuestions] = useState([]);
   const [background, setBackground] = useState("RizzQuiz");
+  const [questionsList, setQuestionsList] = useState([]);
+
+  function handleSetQuestionsList(newQuestions) {
+    setQuestionsList((prevQuestionsList) => [
+      ...prevQuestionsList,
+      newQuestions,
+    ]);
+    console.log("Questions List:", questionsList);
+  }
+  useEffect(() => {
+    setQuestions(questionsList);
+  }, [questionsList]);
+
 
   useEffect(() => {
-    console.log("Updated Questions:", questions);
+    console.log("Current Questions:", questions);
   }, [questions]);
 
   function updateScore(newScore) {
     setScore(newScore);
+    console.log(score);
   }
-  function handleBackground() {
-    setBackground("RizzQuiz");
+
+  function handleBackground(value) {
+    setBackground(value);
   }
+
   function handleSelectedCard(cardValue) {
     setBackground(cardValue);
     switch (cardValue) {
@@ -54,10 +69,9 @@ const App = () => {
         setQuestions(technology);
         break;
       default:
-        setQuestions(sports);
+        setQuestions("");
     }
   }
-
   return (
     <div className="Parent">
       <Header />
@@ -74,11 +88,11 @@ const App = () => {
             }
           />
           <Route
-            path="/Quiz"
+            path="/quiz"
             element={<Quiz questions={questions} updateScore={updateScore} />}
           />
           <Route
-            path="/Result"
+            path="/result"
             element={
               <Result
                 score={score}
@@ -87,7 +101,16 @@ const App = () => {
               />
             }
           />
-          <Route path="/custom-ques" element={<Ques />} />
+          <Route
+            path="/custom-ques"
+            element={<Ques handleSetQuestionsList={handleSetQuestionsList} />}
+          />
+          <Route
+            path="/custom-quiz"
+            element={
+              <Quiz questions={questionsList} updateScore={updateScore} />
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>

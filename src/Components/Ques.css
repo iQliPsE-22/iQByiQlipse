@@ -17,3 +17,8 @@ input#ques-text {
 .option:focus {
     background-color: #ff0099;
 }
+
+#ans {
+    background-color: green;
+    color: white;
+}
