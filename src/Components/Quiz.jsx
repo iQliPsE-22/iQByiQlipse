@@ -17,7 +17,7 @@ const Quiz = ({ updateScore, questions }) => {
       else navigate("/Result");
     }, 1000);
     return () => clearInterval(timer);
-  }, [timeRemaining, currentQues]);
+  }, [timeRemaining, currentQues, navigate]);
 
   function handleOption(e, optionIndex) {
     setSelectedOption(optionIndex);

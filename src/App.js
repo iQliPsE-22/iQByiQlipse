@@ -29,9 +29,13 @@ const App = () => {
     ]);
     console.log("Questions List:", questionsList);
   }
+  useEffect(() => {
+    setQuestions(questionsList);
+  }, [questionsList]);
+
 
   useEffect(() => {
-    console.log("Updated Questions:", questions);
+    console.log("Current Questions:", questions);
   }, [questions]);
 
   function updateScore(newScore) {
@@ -39,8 +43,8 @@ const App = () => {
     console.log(score);
   }
 
-  function handleBackground() {
-    setBackground("RizzQuiz");
+  function handleBackground(value) {
+    setBackground(value);
   }
 
   function handleSelectedCard(cardValue) {

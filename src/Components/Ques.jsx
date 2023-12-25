@@ -20,7 +20,7 @@ function Ques({ handleSetQuestionsList }) {
     const newQuestion = {
       ques: questionText,
       options: [...optionsList],
-      answer: correctAnswer,
+      correct: correctAnswer,
     };
     handleSetQuestionsList(newQuestion);
     navigate("/custom-quiz");
@@ -31,7 +31,7 @@ function Ques({ handleSetQuestionsList }) {
     const newQuestion = {
       ques: questionText,
       options: [...optionsList],
-      answer: correctAnswer,
+      correct: correctAnswer,
     };
     handleSetQuestionsList(newQuestion);
     setQuestionText("");
@@ -103,7 +103,7 @@ function Ques({ handleSetQuestionsList }) {
               <button id="res-btn" onClick={handleNext}>
                 Next
               </button>
-=              <input id="res-btn" type="submit" value="Save" />
+              = <input id="res-btn" type="submit" value="Save" />
             </div>
           </form>
         </div>
