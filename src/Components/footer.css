@@ -1,6 +1,5 @@
 /* footer.css */
 
-
 .footer {
     margin-top: 20px;
     background-color: #f8f9fa;
@@ -8,8 +7,7 @@
     text-align: center;
     width: 100%;
     box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
-    /* Add a subtle shadow at the bottom */
-    /* Specify the cursor image and fallback cursor */
+   
 }
 
 .footer-content {
@@ -48,4 +46,30 @@
 .footer-content a:hover img {
     filter: brightness(80%);
     /* Reduce the brightness of the icons on hover */
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 920px) {
+    .footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-content {
+        flex-direction: column;
+        /* Change the direction of the flex items to vertical */
+        align-items: flex-start;
+        /* Align the items to the start of the container */
+    }
+
+    .footer-content div {
+        margin-right: 0;
+        /* Remove the right margin for the div elements */
+    }
+
+    .footer-content a {
+        margin: 5px 0;
+        /* Add margin to the anchor elements */
+    }
 }
