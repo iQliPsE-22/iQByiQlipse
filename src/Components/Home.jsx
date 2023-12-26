@@ -16,6 +16,9 @@ const Home = ({ handleBackground, handleSelectedCard }) => {
   }
   return (
     <>
+      <div >
+
+      </div>
       <div>
         <div className="nav">
           <Card value="Sports" handleSelectedCard={handleCardSelection} />

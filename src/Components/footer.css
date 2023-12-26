@@ -1,0 +1,51 @@
+/* footer.css */
+
+
+.footer {
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow at the bottom */
+    /* Specify the cursor image and fallback cursor */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content div {
+    margin: 5px 0;
+    margin-right: 10px;
+}
+
+.footer-content a {
+    margin: 0 10px;
+    display: inline-flex;
+    /* Use inline-flex to allow flexible sizing */
+    align-items: center;
+    /* Align the items vertically */
+    transition: transform 0.3s ease;
+}
+
+.footer-content a:hover {
+    transform: translateY(-3px);
+    /* Add a slight upward movement on hover */
+}
+
+.footer-content img {
+    max-width: 48px;
+    /* Set a maximum width for the images */
+    height: auto;
+    display: block;
+    /* Ensure the images behave as block elements */
+}
+
+.footer-content a:hover img {
+    filter: brightness(80%);
+    /* Reduce the brightness of the icons on hover */
+}

@@ -11,10 +11,11 @@ body {
   overflow-x: hidden;
 }
 
-
 li {
   list-style-type: none;
 }
+
+
 
 .container {
   height: 100vh;
@@ -23,7 +24,12 @@ li {
   justify-content: center;
   background-color: rgb(176, 173, 173);
   overflow: hidden;
-  
+
+}
+
+.parent {
+  height: 100vh;
+  cursor: url(./Assets/pointer.png), default;
 }
 
 .back-container {
@@ -38,7 +44,8 @@ li {
   align-items: center;
   justify-content: baseline;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.8);
-  backdrop-filter: blur(5px); /* Apply a blur effect to create a glass-like appearance */
+  backdrop-filter: blur(5px);
+  /* Apply a blur effect to create a glass-like appearance */
   animation: curtain 100s linear;
   z-index: 1;
   border-radius: 20px;
@@ -81,7 +88,7 @@ li {
 
 .question-container {
   padding: 20px;
-  background: rgba(120, 152, 207, 0.575); 
+  background: rgba(120, 152, 207, 0.575);
   color: aliceblue;
   min-height: 600px;
   height: fit-content;
@@ -164,6 +171,7 @@ li {
   justify-content: center;
 }
 
+
 @media screen and (max-width: 920px) {
   .container {
     height: 100%;
@@ -223,7 +231,7 @@ li {
     max-height: 100vh;
     backdrop-filter: blur(10px);
     /* Add backdrop-filter for the glass effect */
-    background: rgba(75, 75, 75, 0.295); 
+    background: rgba(75, 75, 75, 0.295);
 
   }
 

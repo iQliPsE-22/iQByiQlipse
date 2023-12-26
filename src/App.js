@@ -1,6 +1,7 @@
 // App.jsx
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./Components/cursor.css";
 import "./App.css";
 import Quiz from "./Components/Quiz";
 import Result from "./Components/Result";
@@ -16,6 +17,7 @@ import Home from "./Components/Home.jsx";
 import Background from "./Components/Background";
 import Header from "./Components/Header";
 import Ques from "./Components/Ques";
+import Footer from "./Components/Footer";
 const App = () => {
   const [score, setScore] = useState(0);
   const [questions, setQuestions] = useState([]);
@@ -32,7 +34,6 @@ const App = () => {
   useEffect(() => {
     setQuestions(questionsList);
   }, [questionsList]);
-
 
   useEffect(() => {
     console.log("Current Questions:", questions);
@@ -73,7 +74,8 @@ const App = () => {
     }
   }
   return (
-    <div className="Parent">
+    <>
+    <div className="parent">
       <Header />
       <Background background={background} />
       <BrowserRouter>
@@ -114,6 +116,8 @@ const App = () => {
         </Routes>
       </BrowserRouter>
     </div>
+      <Footer />
+      </>
   );
 };
 
