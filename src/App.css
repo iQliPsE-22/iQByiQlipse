@@ -5,7 +5,6 @@
 
 body {
   user-select: none;
-  /* background-color: rgb(189, 185, 185); */
   background-image: url("./Assets/astronaut-4106766.jpg");
   background-attachment: fixed;
   background-size: cover;
@@ -141,7 +140,7 @@ li {
   margin-top: 25%;
   grid-template-columns: auto auto;
   gap: 2px;
-  padding: 10px;
+  padding: 15px;
   font-size: larger;
 }
 
@@ -190,34 +189,23 @@ li {
 }
 
 @media screen and (max-width: 920px) {
-  .container {
-    height: 100%;
-    width: 100%;
-  }
-
   .back-container {
-    height: 90%;
-    max-height: 100%;
-    max-width: fit-content;
-    height: fit-content;
+    height: 100vh;
   }
 
   .question-container {
+    font-size: smaller;
+    height: 100vh;
+    width: fit-content;
     padding: 20px;
     color: aliceblue;
-    max-height: 100vh;
-    max-width: 100%;
-    height: fit-content;
-    width: fit-content;
     transition: 0.5s;
-    /* backdrop-filter: blur(10px); */
   }
 
   .options {
     width: min-content;
     height: min-content;
     grid-template-columns: auto auto;
-    gap: 50px;
     margin-top: 30%;
     margin-left: auto;
     margin-right: auto;

@@ -72,22 +72,22 @@ const App = () => {
         setQuestions("");
     }
   }
-  function mode() {
-    document.body.style.backgroundColor = "black";
-    document.body.style.color = "white";
-    document.querySelector(".parent").style.backgroundColor = "black";
-    document.querySelector(".parent").style.color = "white";
-    document.querySelector(".header").style.backgroundColor = "grey";
-    document.querySelector(".header").style.color = "white";
-    document.querySelector(".footer").style.backgroundColor = "grey";
-    document.querySelector(".footer").style.color = "white";
-    // document.querySelector(".container").style.backgroundColor = "black";
-  }
+  // function mode() {
+  //   document.body.style.backgroundColor = "black";
+  //   document.body.style.color = "white";
+  //   document.querySelector(".parent").style.backgroundColor = "black";
+  //   document.querySelector(".parent").style.color = "white";
+  //   document.querySelector(".header").style.backgroundColor = "grey";
+  //   document.querySelector(".header").style.color = "white";
+  //   document.querySelector(".footer").style.backgroundColor = "grey";
+  //   document.querySelector(".footer").style.color = "white";
+  //   // document.querySelector(".container").style.backgroundColor = "black";
+  // }
   return (
     <>
       <div className="parent">
         <Header />
-        <Background background={background} />
+
         {/* <div>
           <button onClick={mode}>MODE</button>
         </div> */}
@@ -128,7 +128,8 @@ const App = () => {
             />
           </Routes>
         </BrowserRouter>
-          <Footer />
+        <Background background={background} />
+        <Footer />
       </div>
     </>
   );

@@ -2,7 +2,7 @@
 import React from "react";
 import Card from "./Card";
 import "./home.css";
-import User from "./User";
+// import User from "./User";
 import { useNavigate } from "react-router-dom";
 
 const Home = ({ handleBackground, handleSelectedCard }) => {

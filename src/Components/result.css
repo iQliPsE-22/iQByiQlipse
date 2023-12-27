@@ -1,3 +1,5 @@
+/* result.css */
+
 .result {
   display: flex;
   align-items: center;
@@ -7,15 +9,27 @@
   text-align: center;
   color: rgb(151, 37, 37);
   z-index: 1;
-  position: absolute;
 }
 
 #info {
   display: none;
+
 }
 
 @media (max-width: 920px) {
+  .result {
+    align-items: first baseline;
+    justify-content: flex-start;
+  }
+
   #info {
     display: block;
+    background-color: black;
+    height: 200px;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
   }
 }
