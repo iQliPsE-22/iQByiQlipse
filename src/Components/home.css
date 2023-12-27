@@ -78,6 +78,7 @@ button.start:active {
     justify-content: center;
     z-index: 1;
     padding: 20px;
+    font-size: smaller;
   }
 
   .content {
