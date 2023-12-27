@@ -1,12 +1,11 @@
-/* footer.css */
-
 .footer {
-    margin-top: 10%;
-    background-color: #f8f9fa;
+    background-color: #f8f9fa71;
     padding: 20px;
     text-align: center;
-    width:100%;
+    width: 100%;
     box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10%;
+    bottom: 0;
 }
 
 .footer-content {
@@ -23,28 +22,22 @@
 .footer-content a {
     margin: 0 10px;
     display: inline-flex;
-    /* Use inline-flex to allow flexible sizing */
     align-items: center;
-    /* Align the items vertically */
     transition: transform 0.3s ease;
 }
 
 .footer-content a:hover {
     transform: translateY(-3px);
-    /* Add a slight upward movement on hover */
 }
 
 .footer-content img {
     max-width: 48px;
-    /* Set a maximum width for the images */
     height: auto;
     display: block;
-    /* Ensure the images behave as block elements */
 }
 
 .footer-content a:hover img {
     filter: brightness(80%);
-    /* Reduce the brightness of the icons on hover */
 }
 
 /* Media Queries */
