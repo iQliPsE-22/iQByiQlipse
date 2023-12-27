@@ -1,7 +1,6 @@
 // App.jsx
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./Components/cursor.css";
 import "./App.css";
 import Quiz from "./Components/Quiz";
 import Result from "./Components/Result";
@@ -73,51 +72,65 @@ const App = () => {
         setQuestions("");
     }
   }
+  function mode() {
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+    document.querySelector(".parent").style.backgroundColor = "black";
+    document.querySelector(".parent").style.color = "white";
+    document.querySelector(".header").style.backgroundColor = "grey";
+    document.querySelector(".header").style.color = "white";
+    document.querySelector(".footer").style.backgroundColor = "grey";
+    document.querySelector(".footer").style.color = "white";
+    // document.querySelector(".container").style.backgroundColor = "black";
+  }
   return (
     <>
-    <div className="parent">
-      <Header />
-      <Background background={background} />
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Home
-                handleSelectedCard={handleSelectedCard}
-                handleBackground={handleBackground}
-              />
-            }
-          />
-          <Route
-            path="/quiz"
-            element={<Quiz questions={questions} updateScore={updateScore} />}
-          />
-          <Route
-            path="/result"
-            element={
-              <Result
-                score={score}
-                questions={questions}
-                handleBackground={handleBackground}
-              />
-            }
-          />
-          <Route
-            path="/custom-ques"
-            element={<Ques handleSetQuestionsList={handleSetQuestionsList} />}
-          />
-          <Route
-            path="/custom-quiz"
-            element={
-              <Quiz questions={questionsList} updateScore={updateScore} />
-            }
-          />
-        </Routes>
-      </BrowserRouter>
-    </div>
+      <div className="parent">
+        <Header />
+        <Background background={background} />
+        {/* <div>
+          <button onClick={mode}>MODE</button>
+        </div> */}
+        <BrowserRouter>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Home
+                  handleSelectedCard={handleSelectedCard}
+                  handleBackground={handleBackground}
+                />
+              }
+            />
+            <Route
+              path="/quiz"
+              element={<Quiz questions={questions} updateScore={updateScore} />}
+            />
+            <Route
+              path="/result"
+              element={
+                <Result
+                  score={score}
+                  questions={questions}
+                  handleBackground={handleBackground}
+                />
+              }
+            />
+            <Route
+              path="/custom-ques"
+              element={<Ques handleSetQuestionsList={handleSetQuestionsList} />}
+            />
+            <Route
+              path="/custom-quiz"
+              element={
+                <Quiz questions={questionsList} updateScore={updateScore} />
+              }
+            />
+          </Routes>
+        </BrowserRouter>
+      </div>
       <Footer />
-      </>
+    </>
   );
 };
 

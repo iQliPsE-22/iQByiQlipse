@@ -1,16 +1,22 @@
 #ques-text {
     font-size: larger;
 }
-
+input{
+    outline: none;
+    border: none;
+}
 input#ques-text {
     height: 60px;
     width: 100%;
     resize: both;
+    outline: none;
+    border-radius: 25px;
+    border: 2px solid #ff0099;
 }
 
 .option {
     color: aliceblue;
-    font-size: 100%;
+    font-size: larger;
 
 }
 
@@ -19,6 +25,8 @@ input#ques-text {
 }
 
 #ans {
-    background-color: green;
     color: white;
+}
+#ans:focus{
+    background-color: #00ff22;
 }

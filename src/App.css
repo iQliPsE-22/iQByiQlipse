@@ -8,14 +8,20 @@ body {
   background-color: rgb(189, 185, 185);
   font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Geneva,
     Verdana, sans-serif;
-  overflow-x: hidden;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  background-color: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(#3023ae, #ff0099);
 }
 
 li {
   list-style-type: none;
 }
-
-
 
 .container {
   height: 100vh;
@@ -171,6 +177,9 @@ li {
   justify-content: center;
 }
 
+.container {
+  background-color: inherit;
+}
 
 @media screen and (max-width: 920px) {
   .container {
@@ -220,19 +229,16 @@ li {
 
 @media screen and (max-width: 550px) {
   .back-container {
-    max-width: 100%;
-    max-height: 100vh;
-    backdrop-filter: blur(10px);
-    /* Add backdrop-filter for the glass effect */
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .question-container {
-    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width:90%;
     max-height: 100vh;
     backdrop-filter: blur(10px);
-    /* Add backdrop-filter for the glass effect */
-    background: rgba(75, 75, 75, 0.295);
-
   }
 
   .options {

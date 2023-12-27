@@ -1,13 +1,12 @@
 /* footer.css */
 
 .footer {
-    margin-top: 20px;
+    margin-top: 10%;
     background-color: #f8f9fa;
     padding: 20px;
     text-align: center;
-    width: 100%;
+    width:100%;
     box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
-   
 }
 
 .footer-content {
@@ -51,25 +50,23 @@
 /* Media Queries */
 
 @media screen and (max-width: 920px) {
-    .footer{
+    .footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 90%;
     }
+
     .footer-content {
         flex-direction: column;
-        /* Change the direction of the flex items to vertical */
         align-items: flex-start;
-        /* Align the items to the start of the container */
     }
 
     .footer-content div {
         margin-right: 0;
-        /* Remove the right margin for the div elements */
     }
 
     .footer-content a {
         margin: 5px 0;
-        /* Add margin to the anchor elements */
     }
 }

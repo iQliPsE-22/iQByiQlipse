@@ -10,6 +10,7 @@
   background-color: white;
   max-height: fit-content;
   height: 70px;
+  width: 100%;
 }
 
 @media screen and (max-width:920px) {

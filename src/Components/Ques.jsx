@@ -44,7 +44,7 @@ function Ques({ handleSetQuestionsList }) {
       <div className="back-container">
         <div className="question-container">
           <div id="num-circle">
-            <h1 id="num">{questionNumber}/10</h1>
+            <h2 id="num">{questionNumber}/10</h2>
           </div>
           <form className="ques-form" onSubmit={handleSubmit}>
             <input
@@ -103,7 +103,7 @@ function Ques({ handleSetQuestionsList }) {
               <button id="res-btn" onClick={handleNext}>
                 Next
               </button>
-              = <input id="res-btn" type="submit" value="Save" />
+              <input id="res-btn" type="submit" value="Save" />
             </div>
           </form>
         </div>

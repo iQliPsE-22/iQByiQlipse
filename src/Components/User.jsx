@@ -8,6 +8,7 @@ const User = () => {
     email: "",
     phone: "",
   });
+
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
