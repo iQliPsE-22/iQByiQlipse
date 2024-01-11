@@ -1,19 +1,4 @@
-<html>
-  <head>
-  </head>
-  <body>
-    <div>
-      <div className="iframe-container">
-        <iframe
-          src="https://rizzquiz.vercel.app/"
-          title="Embedded Content"
-          frameBorder="2"
-          allowFullScreen
-        ></iframe>
-      </div>
-    </div>
-  </body>
-</html>
+![image](https://github.com/iQliPsE-22/iQByiQlipse/assets/91374730/90b75ff1-697c-44cf-8863-638934cb2702)
 
 
 # Getting Started with Create React App
